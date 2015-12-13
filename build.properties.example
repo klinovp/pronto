@@ -1,0 +1,2 @@
+# rename this file to build.properties and edit paths accordingly
+natives.dir=/usr/local/lib/jni

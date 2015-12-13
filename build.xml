@@ -6,7 +6,6 @@
 
   <!-- Read user properties -->
   <property file="build.properties" />
-  <property file="${user.home}/build.properties" />
 
   <!-- Enviroment -->
   <property environment="env" />
@@ -22,9 +21,9 @@
   <property name="dist" location="dist" />
   <property name="project.name" value="pronto" />
   <property name="pronto.name" value="pronto" />
-  <property name="project.version.number" value="0.1" />
+  <property name="project.version.number" value="0.2" />
   <property name="pronto.runner" value="uk.ac.manchester.cs.pronto.Pronto" />
-  <property name="pronto.tester" value="ProntoMainTestSuite" />
+  <property name="pronto.tester" value="uk.ac.manchester.cs.pronto.ProntoMainTestSuite" />
 
   <path id="project.class.path">
     <pathelement location="lib/" />
@@ -36,7 +35,6 @@
   </path>
 
   <target name="init">
-		<echo>FaCT.DIR=${factpp.dir}</echo>
     <pathconvert targetos="unix" property="classpath" refid="project.class.path" />
     <echo>CLASSPATH=${classpath}</echo>
     <!-- Create the time stamp -->
@@ -69,10 +67,12 @@
   </target>
 
   <target name="test" depends="build">
-    <junit maxmemory="1024M" fork="no" haltonfailure="no" printsummary="yes">
-      <classpath refid="project.class.path" />
-
-      <test name="${pronto.tester}" />
+    <echo>-Djava.library.path=${natives.dir}</echo>
+    <junit fork="yes" maxmemory="1024M" haltonfailure="no" printsummary="on">
+      	<classpath refid="project.class.path" />
+	<jvmarg value="-Djava.library.path=${natives.dir}"/>
+      	<test name="${pronto.tester}" />
+	<formatter type="plain" usefile="false" />
     </junit>
   </target>
   
