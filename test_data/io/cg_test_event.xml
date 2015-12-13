@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<conflict_graph xmlns="http://clarkparsia.com/pronto#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:pronto="http://clarkparsia.com/pronto#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence>http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion>file:test_prefix#Penguin</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+        <conflict_set>
+            <conditional_constraint>
+                <evidence>file:test_prefix#Bird</evidence>
+                <conclusion>file:test_prefix#FlyingObject</conclusion>
+                <probability lower="0.9" upper="0.95"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence>file:test_prefix#Penguin</evidence>
+                <conclusion>file:test_prefix#FlyingObject</conclusion>
+                <probability lower="0.0" upper="0.05"/>
+            </conditional_constraint>
+        </conflict_set>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence>http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion>file:test_prefix#Bird</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+</conflict_graph>

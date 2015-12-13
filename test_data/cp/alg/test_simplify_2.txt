@@ -1,0 +1,64 @@
+8
+[1, 1, 1, 1, 1, 1, 1, 1]
+MAX
+[-1, 0, 1]
+[-1, 0, 1]
+[-1, 0, 1]
+[-1, 0, 1]
+[-1, 0, 1]
+[-1, 0, 1]
+[-1, 0, 1]
+[-1, 0, 1]
+Constraint
+RELATIONAL
+F
+[0, 1]
+[0, 0]
+[0, 1]
+[1, 1]
+
+Constraint
+RELATIONAL
+F
+[2, 3]
+[0, 0]
+[0, 1]
+[1, 1]
+
+Constraint
+RELATIONAL
+F
+[4, 5]
+[1, 1]
+[1, 0]
+
+Constraint
+RELATIONAL
+F
+[6, 7]
+[0, 0]
+[0, 1]
+
+Constraint
+RELATIONAL
+I
+[0, 1, 2, 3]
+[1, 1, 1, 1]
+
+Constraint
+RELATIONAL
+I
+[2, 3, 4, 5]
+[1, 1, 1, 1]
+
+Constraint
+RELATIONAL
+I
+[0, 1, 2, 3, 4, 5]
+[0, 1, 0, 0, 1, 0]
+[1, 1, 1, 1, 1, 0]
+
+
+
+
+

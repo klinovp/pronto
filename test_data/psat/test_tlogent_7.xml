@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY pronto "http://clarkparsia.com/pronto#" >
+    <!ENTITY owl11 "http://www.w3.org/2006/12/owl11#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl11xml "http://www.w3.org/2006/12/owl11-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY test "file:test_prefix"> 
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="&test;#"
+     xml:base="&test;"
+     xmlns:owl11="http://www.w3.org/2006/12/owl11#"
+     xmlns:owl11xml="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:pronto="http://clarkparsia.com/pronto#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
+    <owl:Ontology rdf:about="">
+        <rdfs:label>TestPP</rdfs:label>
+        <rdfs:comment
+            >First very simple probabilistic part of probabilistic ontology</rdfs:comment>
+        <owl:versionInfo>1.0</owl:versionInfo>
+        <owl:imports rdf:resource="file:test_data/psat/test.xml"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&pronto;certainty"/>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="&test;#ArcticPenguin"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="&test;#WingedObject"/>
+        <pronto:certainty>0.7;0.7</pronto:certainty>
+    </owl11:Axiom>
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="&test;#Penguin"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="&test;#FlyingObject"/>
+        <pronto:certainty>0.4;0.4</pronto:certainty>
+    </owl11:Axiom>
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="&owl;Thing"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="&test;#ArcticPenguin"/>
+        <pronto:certainty>0.9;0.9</pronto:certainty>
+    </owl11:Axiom>
+
+
+</rdf:RDF>

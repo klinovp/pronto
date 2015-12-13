@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY pronto "http://clarkparsia.com/pronto#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY owl2 "http://www.w3.org/2006/12/owl2#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY cancer_ra "http://clarkparsia.com/pronto/cancer_ra.owl#" >
+    <!ENTITY null "http://clarkparsia.com/pronto/cancer_cc.owl#" >
+]>
+
+
+
+
+
+<!-- Axioms: 37 -->
+
+<Ontology xmlns="http://www.w3.org/2006/12/owl2-xml#"
+     xml:base="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:null="http://clarkparsia.com/pronto/cancer_cc.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:pronto="http://clarkparsia.com/pronto#"
+     xmlns:cancer_ra="http://clarkparsia.com/pronto/cancer_ra.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl2="http://www.w3.org/2006/12/owl2#"
+     URI="http://clarkparsia.com/pronto/cancer_cc.owl">
+    <Imports
+        >file:examples/brc/ontologies/cancer_ra.owl</Imports>
+    <Annotation annotationURI="&rdfs;comment">
+        <Constant
+            >Bunch of conditional constraints for assessing breast cancer risk</Constant>
+    </Annotation>
+    <Annotation annotationURI="&owl;versionInfo">
+        <Constant>1.0</Constant>
+    </Annotation>
+    <SubClassOf>
+        <Annotation annotationURI="&pronto;certainty">
+            <Constant>0.79;0.79</Constant>
+        </Annotation>
+        <OWLClass URI="&cancer_ra;PostmenopausalWomanTakingEstrogenAndTestosterone"/>
+        <OWLClass URI="&cancer_ra;WomanUnderModeratelyIncreasedBRCRisk"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Annotation annotationURI="&pronto;certainty">
+            <Constant>0.21;0.21</Constant>
+        </Annotation>
+        <OWLClass URI="&cancer_ra;PostmenopausalWomanTakingEstrogenAndTestosterone"/>
+        <OWLClass URI="&cancer_ra;WomanUnderWeakelyIncreasedBRCRisk"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Annotation annotationURI="&pronto;certainty">
+            <Constant>0.35;0.35</Constant>
+        </Annotation>
+        <OWLClass URI="&cancer_ra;PostmenopausalWomanTakingEstrogenAndProgestin"/>
+        <OWLClass URI="&cancer_ra;WomanUnderWeakelyIncreasedBRCRisk"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Annotation annotationURI="&pronto;certainty">
+            <Constant>0.6;0.8</Constant>
+        </Annotation>
+        <OWLClass URI="&cancer_ra;WomanWithBRCA1Mutation"/>
+        <OWLClass URI="&cancer_ra;WomanUnderLifetimeBRCRisk"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Annotation annotationURI="&pronto;certainty">
+            <Constant>0.50;0.50</Constant>
+        </Annotation>
+        <OWLClass URI="&cancer_ra;PostmenopausalWomanTakingProgestin"/>
+        <OWLClass URI="&cancer_ra;WomanUnderModeratelyIncreasedBRCRisk"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Annotation annotationURI="&pronto;certainty">
+            <Constant>0.025;0.025</Constant>
+        </Annotation>
+        <OWLClass URI="&cancer_ra;AshkenaziJewishWoman"/>
+        <OWLClass URI="&cancer_ra;WomanWithBRCAMutation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Annotation annotationURI="&pronto;certainty">
+            <Constant>0.36;0.36</Constant>
+        </Annotation>
+        <OWLClass URI="&cancer_ra;PostmenopausalWomanTakingProgestin"/>
+        <OWLClass URI="&cancer_ra;WomanUnderStronglyIncreasedBRCRisk"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Annotation annotationURI="&pronto;certainty">
+            <Constant>0.13;0.13</Constant>
+        </Annotation>
+        <OWLClass URI="&cancer_ra;PostmenopausalWomanTakingProgestin"/>
+        <OWLClass URI="&cancer_ra;WomanUnderWeakelyIncreasedBRCRisk"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Annotation annotationURI="&pronto;certainty">
+            <Constant>0.85;0.85</Constant>
+        </Annotation>
+        <OWLClass URI="&cancer_ra;PostmenopausalWomanTakingTestosterone"/>
+        <OWLClass URI="&cancer_ra;WomanUnderWeakelyIncreasedBRCRisk"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Annotation annotationURI="&pronto;certainty">
+            <Constant>0.67;0.67</Constant>
+        </Annotation>
+        <OWLClass URI="&cancer_ra;PostmenopausalWomanTakingEstrogen"/>
+        <OWLClass URI="&cancer_ra;WomanUnderWeakelyIncreasedBRCRisk"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Annotation annotationURI="&pronto;certainty">
+            <Constant>1;1</Constant>
+        </Annotation>
+        <OWLClass URI="&cancer_ra;WomanTakingProgestin"/>
+        <Individual URI="&cancer_ra;Helen"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <Annotation annotationURI="&pronto;certainty">
+            <Constant>0.65;0.65</Constant>
+        </Annotation>
+        <OWLClass URI="&cancer_ra;PostmenopausalWomanTakingEstrogenAndProgestin"/>
+        <OWLClass URI="&cancer_ra;WomanUnderModeratelyIncreasedBRCRisk"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Annotation annotationURI="&pronto;certainty">
+            <Constant>1;1</Constant>
+        </Annotation>
+        <OWLClass URI="&cancer_ra;WomanTakingEstrogen"/>
+        <Individual URI="&cancer_ra;Helen"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <Annotation annotationURI="&pronto;certainty">
+            <Constant>0.3;0.85</Constant>
+        </Annotation>
+        <OWLClass URI="&cancer_ra;WomanWithBRCAMutation"/>
+        <OWLClass URI="&cancer_ra;WomanUnderLifetimeBRCRisk"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Annotation annotationURI="&pronto;certainty">
+            <Constant>1;1</Constant>
+        </Annotation>
+        <OWLClass URI="&cancer_ra;PostmenopausalWoman"/>
+        <Individual URI="&cancer_ra;Helen"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <Annotation annotationURI="&pronto;certainty">
+            <Constant>0;0.123</Constant>
+        </Annotation>
+        <OWLClass URI="&cancer_ra;Woman"/>
+        <OWLClass URI="&cancer_ra;WomanUnderLifetimeBRCRisk"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Annotation annotationURI="&pronto;certainty">
+            <Constant>0.25;0.25</Constant>
+        </Annotation>
+        <OWLClass URI="&cancer_ra;PostmenopausalWomanTakingEstrogen"/>
+        <OWLClass URI="&cancer_ra;WomanUnderModeratelyIncreasedBRCRisk"/>
+    </SubClassOf>
+    <Imports
+        >file:examples/brc/ontologies/cancer_ra.owl</Imports>
+</Ontology>

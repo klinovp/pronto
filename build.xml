@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<project name="Pronto" default="dist" basedir=".">
+  <description>
+    Pronto is an extension of Pellet to reason with probabilistic ontologies.
+  </description>
+
+  <!-- Read user properties -->
+  <property file="build.properties" />
+  <property file="${user.home}/build.properties" />
+
+  <!-- Enviroment -->
+  <property environment="env" />
+
+  <!-- Global Properties -->
+  <property name="src" location="src" />
+  <property name="test.dir" location="test" />
+  <property name="examples.dir" location="examples" />
+  <property name="javadoc.dir" location="doc/javadoc" />
+  <property name="build" location="build" />
+  <property name="build.class" location="${build}/class" />
+  <property name="build.lib" location="${build}/lib" />
+  <property name="dist" location="dist" />
+  <property name="project.name" value="pronto" />
+  <property name="pronto.name" value="pronto" />
+  <property name="project.version.number" value="0.1" />
+  <property name="pronto.runner" value="uk.ac.manchester.cs.pronto.Pronto" />
+  <property name="pronto.tester" value="ProntoMainTestSuite" />
+
+  <path id="project.class.path">
+    <pathelement location="lib/" />
+    <pathelement location="${build.class}" />
+    <fileset dir="lib">
+      <include name="**/*.jar" />
+      <exclude name="**/${project.name}*.jar" />
+    </fileset>
+  </path>
+
+  <target name="init">
+		<echo>FaCT.DIR=${factpp.dir}</echo>
+    <pathconvert targetos="unix" property="classpath" refid="project.class.path" />
+    <echo>CLASSPATH=${classpath}</echo>
+    <!-- Create the time stamp -->
+    <tstamp />
+    <!-- Create the build directory structure used by compile -->
+    <mkdir dir="${build.class}" />
+  </target>
+
+  <target name="compile" depends="init" description="Compile source files.">
+    <javac source="1.7" target="1.7" destdir="${build.class}" debug="yes" deprecation="yes">
+      <src path="${src}" />
+      <src path="${test.dir}" />
+      <classpath refid="project.class.path" />
+    </javac>
+  </target>
+
+  <target name="build" depends="compile" description="Compile sources and copy data files into build directory.">
+    <copy todir="${build.class}">
+      <fileset dir="${src}">
+        <exclude name="**/*.java" />
+      </fileset>
+      <fileset dir=".">
+        <include name="images/*" />
+      </fileset>
+    </copy>
+
+    <copy todir="${build.lib}" flatten="true">
+      <fileset dir="lib" />
+    </copy>
+  </target>
+
+  <target name="test" depends="build">
+    <junit maxmemory="1024M" fork="no" haltonfailure="no" printsummary="yes">
+      <classpath refid="project.class.path" />
+
+      <test name="${pronto.tester}" />
+    </junit>
+  </target>
+  
+  <target name="run" depends="dist">
+    <java classname="${pronto.runner}" fork="true" maxmemory="1024M">
+      <classpath refid="project.class.path" />
+    </java>
+  </target>
+
+  <target name="label-date" depends="init">
+    <property name="project.version.label" value="${DSTAMP}" />
+    <property name="project.label" value="${project.name}-${DSTAMP}" />
+  </target>
+
+  <target name="label-nightly" depends="init">
+    <property name="project.version.label" value="nightly-build-${DSTAMP}" />
+    <property name="project.label" value="${project.name}-nightly" />
+  </target>
+
+  <target name="label-release" depends="init">
+    <property name="project.version.label" value="${project.version.number}" />
+    <property name="project.label" value="${project.name}-${project.version.number}" />
+  </target>
+
+  <target name="distfiles">
+    <!-- Copy in lib files -->
+    <mkdir dir="${dist}/lib" />
+    <copy todir="${dist}/lib">
+      <fileset dir="lib">
+        <include name="**/*.jar" />
+      	<include name="**/*.txt" />
+        <exclude name="**/${project.name}*.jar" />
+      </fileset>
+    </copy>
+
+    <!-- Copy base files in -->
+    <copy todir="${dist}">
+      <fileset dir="">
+        <include name="build.xml" />
+        <include name="doc/**" />
+        <include name="natives/**" />
+        <include name="LICENSE.txt" />
+        <include name="*.bat" />
+        <include name="pronto.sh" />
+        <include name="readme.txt" />
+        <include name="src/**" />
+      	<include name="test/**" />
+        <include name="test_data/**" />
+        <include name="examples/**" />
+        <include name="run_example_brc.bat" />
+        <include name="run_test.bat" />
+      	<include name="run_example_brc.sh" />
+      </fileset>
+    </copy>
+  </target>
+
+  <target name="dist" depends="build,distfiles" description="Generate a distribution">
+    <!-- Generate relative classpath for jar file -->
+    <property name="lib" location="${basedir}/lib/" />
+    <pathconvert dirsep="/" pathsep=" " property="Class-Path">
+      <map from="${lib}/" to="" />
+      <map from="${lib}\" to="" />
+      <!--" (dumb vim problem with quotes)-->
+      <path>
+        <fileset dir="lib">
+          <include name="**/*.jar" />
+        </fileset>
+      </path>
+    </pathconvert>
+
+    <!-- Make Jar file. -->
+    <jar jarfile="${dist}/lib/${pronto.name}.jar" basedir="${build.class}">
+      <manifest>
+        <attribute name="Main-Class" value="${pronto.runner}" />
+        <attribute name="Class-Path" value="${Class-Path}" />
+      </manifest>
+    </jar>
+  </target>
+
+  <target name="zipfile" depends="label-date,dist,javadoc" description="Build a zipfile containing source and binaries.">
+    <condition property="project.dirname" value="${project.name}-${DSTAMP}">
+      <not>
+        <isset property="project.dirname" />
+      </not>
+    </condition>
+    <!-- Copy the javadocs -->
+    <copy todir="${dist}">
+      <fileset dir="">
+        <include name="doc/**" />
+      </fileset>
+    </copy>
+    <zip destfile="${dist}/${project.dirname}.zip">
+      <zipfileset dir="dist" prefix="${project.dirname}" excludes="${project.name}*.zip" />
+    </zip>
+  </target>
+
+  <target name="javadoc" depends="build">
+    <javadoc destdir="${javadoc.dir}" access="public" use="true" notree="false" nonavbar="false" noindex="false" splitindex="true" author="true" version="true" nodeprecatedlist="false" nodeprecated="false" sourcepath="${src}" packagenames="com.clarkparsia.pronto.*" doctitle="${project.name}-${project.version.label}" bottom="Copyright &#169; 2008 Clark &amp; Parsia, LLC. All Rights Reserved.">
+      <classpath refid="project.class.path" />
+    </javadoc>
+  </target>
+
+  <target name="release" depends="label-release">
+    <property name="project.dirname" value="${project.name}-${project.version.label}" />
+    <antcall target="zipfile" />
+  </target>
+
+  <target name="nightly-release" depends="label-nightly">
+    <property name="project.dirname" value="${project.name}-nightly" />
+    <antcall target="zipfile" />
+  </target>
+
+  <target name="clean" description="Clean up build files">
+    <delete dir="${build}" />
+    <delete dir="${dist}" />
+    <delete dir="${javadoc.dir}" />
+  </target>
+</project>

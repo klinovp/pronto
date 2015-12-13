@@ -1,0 +1,1867 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY pronto "http://clarkparsia.com/pronto#" >
+    <!ENTITY owl11 "http://www.w3.org/2006/12/owl11#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl11xml "http://www.w3.org/2006/12/owl11-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY ns0 "http://cohse.semanticweb.org/ontologies/people#" >
+    <!ENTITY dog "http://cohse.semanticweb.org/ontologies/people#dog+" >
+    <!ENTITY old "http://cohse.semanticweb.org/ontologies/people#old+" >
+    <!ENTITY red "http://cohse.semanticweb.org/ontologies/people#red+" >
+    <!ENTITY cat "http://cohse.semanticweb.org/ontologies/people#cat+" >
+    <!ENTITY The "http://cohse.semanticweb.org/ontologies/people#The+" >
+    <!ENTITY pet "http://cohse.semanticweb.org/ontologies/people#pet+" >
+    <!ENTITY van "http://cohse.semanticweb.org/ontologies/people#van+" >
+    <!ENTITY mad "http://cohse.semanticweb.org/ontologies/people#mad+" >
+    <!ENTITY bus "http://cohse.semanticweb.org/ontologies/people#bus+" >
+    <!ENTITY Q123 "http://cohse.semanticweb.org/ontologies/people#Q123+" >
+    <!ENTITY Daily "http://cohse.semanticweb.org/ontologies/people#Daily+" >
+    <!ENTITY lorry "http://cohse.semanticweb.org/ontologies/people#lorry+" >
+    <!ENTITY white "http://cohse.semanticweb.org/ontologies/people#white+" >
+    <!ENTITY young "http://cohse.semanticweb.org/ontologies/people#young+" >
+    <!ENTITY animal "http://cohse.semanticweb.org/ontologies/people#animal+" >
+    <!ENTITY haulage "http://cohse.semanticweb.org/ontologies/people#haulage+" >
+    <!ENTITY quality "http://cohse.semanticweb.org/ontologies/people#quality+" >
+    <!ENTITY null "http://www.ece.uc.edu/~klinovp/pronto/people_pets_prob#" >
+    <!ENTITY van2 "http://cohse.semanticweb.org/ontologies/people#white+van+" >
+    <!ENTITY truck "http://cohse.semanticweb.org/ontologies/people#haulage+truck+" >
+]>
+
+
+
+
+
+<!-- Axioms: 300 -->
+
+<Ontology xmlns="http://www.w3.org/2006/12/owl11-xml#"
+     xml:base="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:van2="&ns0;white+van+"
+     xmlns:white="&ns0;white+"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:pet="&ns0;pet+"
+     xmlns:Daily="&ns0;Daily+"
+     xmlns:van="&ns0;van+"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:truck="&ns0;haulage+truck+"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:dog="&ns0;dog+"
+     xmlns:young="&ns0;young+"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:haulage="&ns0;haulage+"
+     xmlns:mad="&ns0;mad+"
+     xmlns:red="&ns0;red+"
+     xmlns:ns0="http://cohse.semanticweb.org/ontologies/people#"
+     xmlns:cat="&ns0;cat+"
+     xmlns:lorry="&ns0;lorry+"
+     xmlns:The="&ns0;The+"
+     xmlns:animal="&ns0;animal+"
+     xmlns:null="http://www.ece.uc.edu/~klinovp/pronto/people_pets_prob#"
+     xmlns:old="&ns0;old+"
+     xmlns:Q123="&ns0;Q123+"
+     xmlns:owl11="http://www.w3.org/2006/12/owl11#"
+     xmlns:owl11xml="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:pronto="http://clarkparsia.com/pronto#"
+     xmlns:bus="&ns0;bus+"
+     xmlns:quality="&ns0;quality+"
+     URI="http://www.ece.uc.edu/~klinovp/pronto/people_pets_prob">
+
+
+    <ObjectPropertyRange>
+        <ObjectProperty URI="&ns0;reads"/>
+        <OWLClass URI="&ns0;publication"/>
+    </ObjectPropertyRange>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;lorry+driver"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;bicycle"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >A human propelled vehicle, with two wheels</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;van+driver"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&ns0;tree"/>
+        <OWLClass URI="&ns0;plant"/>
+    </SubClassOf>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&ns0;has_pet"/>
+        <Individual URI="&ns0;Walt"/>
+        <Individual URI="&ns0;Louie"/>
+    </ObjectPropertyAssertion>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;vegetarian"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >A vegetarian is defined as an animal that eats no other animals, or parts of animals.</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Walt"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;red+top"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>red top</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;haulage+company"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <ObjectPropertyRange>
+        <ObjectProperty URI="&ns0;has_mother"/>
+        <OWLClass URI="&ns0;woman"/>
+    </ObjectPropertyRange>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&ns0;person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty URI="&ns0;has_pet"/>
+                <OWLClass URI="&ns0;animal"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&ns0;pet+owner"/>
+    </EquivalentClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;haulage+truck+driver"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >haulage truck driver</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;car"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>car</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&ns0;dog"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&ns0;eats"/>
+            <OWLClass URI="&ns0;bone"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;grass"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>grass</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;truck"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&ns0;has_pet"/>
+        <Individual URI="&ns0;Walt"/>
+        <Individual URI="&ns0;Dewey"/>
+    </ObjectPropertyAssertion>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Rex"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <ClassAssertion>
+        <OWLClass URI="&ns0;duck"/>
+        <Individual URI="&ns0;Huey"/>
+    </ClassAssertion>
+    <DisjointClasses>
+        <OWLClass URI="&ns0;broadsheet"/>
+        <OWLClass URI="&ns0;tabloid"/>
+    </DisjointClasses>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&ns0;has_pet"/>
+        <Individual URI="&ns0;Joe"/>
+        <Individual URI="&ns0;Fido"/>
+    </ObjectPropertyAssertion>
+    <EntityAnnotation>
+        <ObjectProperty URI="&ns0;has_part"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>has_part</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <ClassAssertion>
+        <OWLClass URI="&ns0;cow"/>
+        <Individual URI="&ns0;Flossie"/>
+    </ClassAssertion>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Daily+Mirror"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Daily Mirror</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <ObjectProperty URI="&ns0;eaten_by"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;cat"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>cat</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;bicycle"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>bicycle</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;young"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>young</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&ns0;elderly"/>
+        <OWLClass URI="&ns0;adult"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&ns0;white+thing"/>
+        <Individual URI="&ns0;Q123+ABC"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&ns0;giraffe"/>
+        <OWLClass URI="&ns0;animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&ns0;haulage+company"/>
+        <OWLClass URI="&ns0;company"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Kevin"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Walt"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Walt</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;tree"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>tree</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EquivalentClasses>
+        <OWLClass URI="&ns0;young+person"/>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&ns0;person"/>
+            <OWLClass URI="&ns0;young"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;red+top"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <ClassAssertion>
+        <OWLClass URI="&ns0;person"/>
+        <Individual URI="&ns0;Fred"/>
+    </ClassAssertion>
+    <EntityAnnotation>
+        <ObjectProperty URI="&ns0;drives"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;broadsheet"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>broadsheet</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Fido"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Fido</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;vehicle"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <DataProperty URI="&ns0;service_number"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Fred"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Fred</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;broadsheet"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >A newspaper. Broadsheets are usually considered to be more &quot;high-brow&quot; than tabloids.</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Fred"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Minnie"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Minnie</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Joe"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <ObjectPropertyDomain>
+        <ObjectProperty URI="&ns0;has_pet"/>
+        <OWLClass URI="&ns0;person"/>
+    </ObjectPropertyDomain>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;brain"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <Declaration>
+        <DataProperty URI="&ns0;service_number"/>
+    </Declaration>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;cat+liker"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>cat liker</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Mick"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >Mick is male and drives a white van. Due to the axiom concerning drivers, we know that Mick must be a man, and is therefore a white van man. The axiom about the reading material of a white van man then allows us to infer things about the Daily Mirror.</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Tom"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;leaf"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;The+Guardian"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;The42"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>The42</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&ns0;old+lady"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&ns0;has_pet"/>
+                <OWLClass URI="&ns0;cat"/>
+            </ObjectAllValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty URI="&ns0;has_pet"/>
+                <OWLClass URI="&ns0;animal"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;haulage+worker"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&ns0;leaf"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&ns0;part_of"/>
+            <OWLClass URI="&ns0;tree"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;duck"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>duck</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;pet+owner"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;duck"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EquivalentClasses>
+        <OWLClass URI="&ns0;man"/>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&ns0;adult"/>
+            <OWLClass URI="&ns0;male"/>
+            <OWLClass URI="&ns0;person"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;grownup"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&ns0;lorry"/>
+        <OWLClass URI="&ns0;vehicle"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;bus+company"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EquivalentClasses>
+        <OWLClass URI="&ns0;dog+liker"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty URI="&ns0;likes"/>
+                <OWLClass URI="&ns0;dog"/>
+            </ObjectSomeValuesFrom>
+            <OWLClass URI="&ns0;person"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;dog+liker"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;driver"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>driver</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;plant"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Rex"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Rex</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Huey"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Huey</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&ns0;bicycle"/>
+        <OWLClass URI="&ns0;vehicle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&ns0;driver"/>
+        <OWLClass URI="&ns0;adult"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&ns0;kid"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <DataPropertyAssertion>
+        <DataProperty URI="&ns0;service_number"/>
+        <Individual URI="&ns0;The42"/>
+        <Constant Datatype="&xsd;integer">42</Constant>
+    </DataPropertyAssertion>
+    <EntityAnnotation>
+        <ObjectProperty URI="&ns0;reads"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>reads</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;The+Sun"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>The Sun</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;haulage+worker"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>haulage worker</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <ObjectProperty URI="&ns0;has_father"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Louie"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;mad+cow"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>mad cow</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&ns0;red+top"/>
+        <OWLClass URI="&ns0;tabloid"/>
+    </SubClassOf>
+    <InverseObjectProperties>
+        <ObjectProperty URI="&ns0;has_part"/>
+        <ObjectProperty URI="&ns0;part_of"/>
+    </InverseObjectProperties>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Daily+Mirror"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >The paper read by Mick (a white van man).</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;plant"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>plant</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;The42"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;female"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <ObjectProperty URI="&ns0;works_for"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>works_for</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Tibbs"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Tibbs</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;pet"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&ns0;person"/>
+        <OWLClass URI="&ns0;animal"/>
+    </SubClassOf>
+    <EquivalentClasses>
+        <OWLClass URI="&ns0;grownup"/>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&ns0;adult"/>
+            <OWLClass URI="&ns0;person"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <OWLClass URI="&ns0;haulage+truck+driver"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty URI="&ns0;drives"/>
+                <OWLClass URI="&ns0;truck"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty URI="&ns0;works_for"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty URI="&ns0;part_of"/>
+                    <OWLClass URI="&ns0;haulage+company"/>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+            <OWLClass URI="&ns0;person"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;brain"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>brain</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;male"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>male</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;woman"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>woman</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Tibbs"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&ns0;sheep"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&ns0;eats"/>
+            <OWLClass URI="&ns0;grass"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&ns0;person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty URI="&ns0;drives"/>
+                <OWLClass URI="&ns0;van"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&ns0;van+driver"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <OWLClass URI="&ns0;sheep"/>
+        <OWLClass URI="&ns0;animal"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <ObjectProperty URI="&ns0;eaten_by"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>eaten_by</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <ObjectProperty URI="&ns0;likes"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Flossie"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Flossie</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&ns0;tiger"/>
+        <OWLClass URI="&ns0;animal"/>
+    </SubClassOf>
+    <InverseObjectProperties>
+        <ObjectProperty URI="&ns0;eats"/>
+        <ObjectProperty URI="&ns0;eaten_by"/>
+    </InverseObjectProperties>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;bus+driver"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>bus driver</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <ObjectProperty URI="&ns0;has_mother"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EquivalentClasses>
+        <OWLClass URI="&ns0;dog+owner"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty URI="&ns0;has_pet"/>
+                <OWLClass URI="&ns0;dog"/>
+            </ObjectSomeValuesFrom>
+            <OWLClass URI="&ns0;person"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <OWLClass URI="&ns0;duck"/>
+        <OWLClass URI="&ns0;animal"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;kid"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>just a kid</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&ns0;animal"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&ns0;eats"/>
+            <OWLClass URI="&owl;Thing"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;bone"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&ns0;adult"/>
+            <OWLClass URI="&ns0;person"/>
+            <OWLClass URI="&ns0;female"/>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&ns0;woman"/>
+    </EquivalentClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;grass"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;tabloid"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >A newspaper. Tabloids are usually thought of as more &quot;down-market&quot; than broadsheets.</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <ObjectPropertyRange>
+        <ObjectProperty URI="&ns0;has_father"/>
+        <OWLClass URI="&ns0;man"/>
+    </ObjectPropertyRange>
+    <SubClassOf>
+        <OWLClass URI="&ns0;giraffe"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&ns0;eats"/>
+            <OWLClass URI="&ns0;leaf"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <DataProperty URI="&ns0;service_number"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>service_number</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;sheep"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Fido"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;dog"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;tiger"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;old+lady"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&ns0;has_pet"/>
+        <Individual URI="&ns0;Walt"/>
+        <Individual URI="&ns0;Huey"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <OWLClass URI="&ns0;bus"/>
+        <Individual URI="&ns0;The42"/>
+    </ClassAssertion>
+    <EntityAnnotation>
+        <ObjectProperty URI="&ns0;reads"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&ns0;cat"/>
+        <OWLClass URI="&ns0;animal"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&ns0;broadsheet"/>
+        <Individual URI="&ns0;The+Times"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&ns0;is_pet_of"/>
+        <Individual URI="&ns0;Rex"/>
+        <Individual URI="&ns0;Mick"/>
+    </ObjectPropertyAssertion>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;dog+owner"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>dog owner</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;young"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty URI="&ns0;eats"/>
+                <ObjectIntersectionOf>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty URI="&ns0;part_of"/>
+                        <OWLClass URI="&ns0;sheep"/>
+                    </ObjectSomeValuesFrom>
+                    <OWLClass URI="&ns0;brain"/>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <OWLClass URI="&ns0;cow"/>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&ns0;mad+cow"/>
+    </EquivalentClasses>
+    <EntityAnnotation>
+        <ObjectProperty URI="&ns0;has_parent"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&ns0;person"/>
+            <ObjectMinCardinality cardinality="3">
+                <ObjectProperty URI="&ns0;has_pet"/>
+                <OWLClass URI="&owl;Thing"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&ns0;animal+lover"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&ns0;person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty URI="&ns0;drives"/>
+                <OWLClass URI="&ns0;bus"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&ns0;bus+driver"/>
+    </EquivalentClasses>
+    <ObjectPropertyDomain>
+        <ObjectProperty URI="&ns0;eats"/>
+        <OWLClass URI="&ns0;animal"/>
+    </ObjectPropertyDomain>
+    <EntityAnnotation>
+        <ObjectProperty URI="&ns0;eats"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Q123+ABC"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant>A white van</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <ObjectProperty URI="&ns0;drives"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>drives</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&ns0;has_pet"/>
+        <Individual URI="&ns0;Fred"/>
+        <Individual URI="&ns0;Tibbs"/>
+    </ObjectPropertyAssertion>
+    <EntityAnnotation>
+        <ObjectProperty URI="&ns0;part_of"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <ClassAssertion>
+        <OWLClass URI="&ns0;male"/>
+        <Individual URI="&ns0;Mick"/>
+    </ClassAssertion>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Louie"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Louie</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <ObjectProperty URI="&ns0;has_pet"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>has_pet</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;man"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>man</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Flossie"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <ClassAssertion>
+        <OWLClass URI="&ns0;duck"/>
+        <Individual URI="&ns0;Louie"/>
+    </ClassAssertion>
+    <EntityAnnotation>
+        <ObjectProperty URI="&ns0;works_for"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <ObjectProperty URI="&ns0;part_of"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>part_of</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&ns0;has_pet"/>
+        <ObjectProperty URI="&ns0;likes"/>
+    </SubObjectPropertyOf>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;dog+owner"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;leaf"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>leaf</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&ns0;newspaper"/>
+        <OWLClass URI="&ns0;publication"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Dewey"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Dewey</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;bone"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>bone</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;elderly"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EquivalentClasses>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&ns0;works_for"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty URI="&ns0;part_of"/>
+                    <OWLClass URI="&ns0;haulage+company"/>
+                </ObjectSomeValuesFrom>
+                <OWLClass URI="&ns0;haulage+company"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+        <OWLClass URI="&ns0;haulage+worker"/>
+    </EquivalentClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;van"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;car"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Tom"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Tom</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;newspaper"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>newspaper</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;person"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Kevin"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Kevin</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <ObjectProperty URI="&ns0;has_father"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>has_father</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&ns0;reads"/>
+        <Individual URI="&ns0;Mick"/>
+        <Individual URI="&ns0;Daily+Mirror"/>
+    </ObjectPropertyAssertion>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;vehicle"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>vehicle</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <ClassAssertion>
+        <OWLClass URI="&ns0;person"/>
+        <Individual URI="&ns0;Kevin"/>
+    </ClassAssertion>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;giraffe"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;quality+broadsheet"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EquivalentClasses>
+        <OWLClass URI="&ns0;cat+liker"/>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&ns0;person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty URI="&ns0;likes"/>
+                <OWLClass URI="&ns0;cat"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <ClassAssertion>
+        <OWLClass URI="&ns0;van"/>
+        <Individual URI="&ns0;Q123+ABC"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&ns0;van"/>
+        <OWLClass URI="&ns0;vehicle"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;adult"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >Things that are adult.</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;person"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>person</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;company"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;grownup"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>grownup</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;truck"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>truck</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;pet"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>pet</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&ns0;has_father"/>
+        <ObjectProperty URI="&ns0;has_parent"/>
+    </SubObjectPropertyOf>
+    <EntityAnnotation>
+        <ObjectProperty URI="&ns0;is_pet_of"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>is_pet_of</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <ClassAssertion>
+        <OWLClass URI="&ns0;broadsheet"/>
+        <Individual URI="&ns0;The+Guardian"/>
+    </ClassAssertion>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;white+thing"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&ns0;car"/>
+        <OWLClass URI="&ns0;vehicle"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;lorry"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Mick"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Mick</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <ObjectProperty URI="&ns0;has_pet"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >Anyone that has a pet must like that pet.</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <ObjectProperty URI="&ns0;eats"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>eats</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;van"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>van</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;vegetarian"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>vegetarian</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <ClassAssertion>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty URI="&ns0;has_pet"/>
+            <OWLClass URI="&owl;Thing"/>
+        </ObjectMaxCardinality>
+        <Individual URI="&ns0;Joe"/>
+    </ClassAssertion>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;publication"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;cow"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>cow</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Joe"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Joe</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EquivalentClasses>
+        <OWLClass URI="&ns0;white+van+man"/>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&ns0;man"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty URI="&ns0;drives"/>
+                <ObjectIntersectionOf>
+                    <OWLClass URI="&ns0;van"/>
+                    <OWLClass URI="&ns0;white+thing"/>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <DisjointClasses>
+        <ObjectUnionOf>
+            <OWLClass URI="&ns0;animal"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty URI="&ns0;part_of"/>
+                <OWLClass URI="&ns0;animal"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+        <ObjectUnionOf>
+            <OWLClass URI="&ns0;plant"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty URI="&ns0;part_of"/>
+                <OWLClass URI="&ns0;plant"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Q123+ABC"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Q123 ABC</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <InverseObjectProperties>
+        <ObjectProperty URI="&ns0;is_pet_of"/>
+        <ObjectProperty URI="&ns0;has_pet"/>
+    </InverseObjectProperties>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;young+person"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>kid</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Fluffy"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <ClassAssertion>
+        <OWLClass URI="&ns0;dog"/>
+        <Individual URI="&ns0;Fido"/>
+    </ClassAssertion>
+    <EntityAnnotation>
+        <ObjectProperty URI="&ns0;has_child"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <ClassAssertion>
+        <OWLClass URI="&ns0;female"/>
+        <Individual URI="&ns0;Minnie"/>
+    </ClassAssertion>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Minnie"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&ns0;has_pet"/>
+        <Individual URI="&ns0;Minnie"/>
+        <Individual URI="&ns0;Tom"/>
+    </ObjectPropertyAssertion>
+    <SubClassOf>
+        <OWLClass URI="&ns0;broadsheet"/>
+        <OWLClass URI="&ns0;newspaper"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&ns0;bus"/>
+        <OWLClass URI="&ns0;vehicle"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;cat+liker"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;mad+cow"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >A mad cow is a cow that has been eating the brains of sheep.</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;magazine"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&ns0;cat"/>
+        <OWLClass URI="&ns0;dog"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;haulage+truck+driver"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <ObjectProperty URI="&ns0;likes"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>likes</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <ClassAssertion>
+        <OWLClass URI="&ns0;cat"/>
+        <Individual URI="&ns0;Tibbs"/>
+    </ClassAssertion>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;man"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty URI="&ns0;drives"/>
+                <OWLClass URI="&ns0;lorry"/>
+            </ObjectSomeValuesFrom>
+            <OWLClass URI="&ns0;person"/>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&ns0;lorry+driver"/>
+    </EquivalentClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;dog+liker"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>dog liker</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <ObjectProperty URI="&ns0;has_part"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DataPropertyRange>
+        <DataProperty URI="&ns0;service_number"/>
+        <Datatype URI="&xsd;integer"/>
+    </DataPropertyRange>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;pet+owner"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>pet owner</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;animal+lover"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >Someone who really likes animals</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&ns0;truck"/>
+        <OWLClass URI="&ns0;vehicle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&ns0;tabloid"/>
+        <OWLClass URI="&ns0;newspaper"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;white+thing"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>white thing</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;cat"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&ns0;animal"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&ns0;eats"/>
+                <ObjectComplementOf>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty URI="&ns0;part_of"/>
+                        <OWLClass URI="&ns0;animal"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectComplementOf>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&ns0;eats"/>
+                <ObjectComplementOf>
+                    <OWLClass URI="&ns0;animal"/>
+                </ObjectComplementOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&ns0;vegetarian"/>
+    </EquivalentClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;tree"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;animal"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;sheep"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>sheep</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&ns0;elderly"/>
+            <OWLClass URI="&ns0;person"/>
+            <OWLClass URI="&ns0;female"/>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&ns0;old+lady"/>
+    </EquivalentClasses>
+    <ClassAssertion>
+        <OWLClass URI="&ns0;duck"/>
+        <Individual URI="&ns0;Dewey"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <Annotation annotationURI="&pronto;certainty">
+            <Constant>0.6;0.7</Constant>
+        </Annotation>
+        <OWLClass URI="&ns0;kid"/>
+        <OWLClass URI="&ns0;young+person"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;quality+broadsheet"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >quality broadsheet</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <ClassAssertion>
+        <OWLClass URI="&ns0;tiger"/>
+        <Individual URI="&ns0;Fluffy"/>
+    </ClassAssertion>
+    <EntityAnnotation>
+        <ObjectProperty URI="&ns0;is_pet_of"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;adult"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>adult</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;bus+driver"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >Someone who drives a bus.</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;young+person"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&ns0;has_mother"/>
+        <ObjectProperty URI="&ns0;has_parent"/>
+    </SubObjectPropertyOf>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;white+van+man"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >A white van man is a man who drives a white van.</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;cat+owner"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>cat owner</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <ObjectProperty URI="&ns0;has_mother"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>has_mother</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <ClassAssertion>
+        <OWLClass URI="&ns0;person"/>
+        <Individual URI="&ns0;Joe"/>
+    </ClassAssertion>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;haulage+company"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>haulage company</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;The+Sun"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&ns0;person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty URI="&ns0;has_pet"/>
+                <OWLClass URI="&ns0;cat"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&ns0;cat+owner"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <OWLClass URI="&ns0;magazine"/>
+        <OWLClass URI="&ns0;publication"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;van+driver"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>van driver</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;bus+company"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>bus company</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;old+lady"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>old lady</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;white+van+man"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>white van man</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&ns0;cow"/>
+        <OWLClass URI="&ns0;vegetarian"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&ns0;white+van+man"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&ns0;reads"/>
+            <OWLClass URI="&ns0;tabloid"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Dewey"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <ObjectPropertyRange>
+        <ObjectProperty URI="&ns0;has_pet"/>
+        <OWLClass URI="&ns0;animal"/>
+    </ObjectPropertyRange>
+    <EntityAnnotation>
+        <Individual URI="&ns0;The+Times"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EquivalentClasses>
+        <OWLClass URI="&ns0;driver"/>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&ns0;person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty URI="&ns0;drives"/>
+                <OWLClass URI="&ns0;vehicle"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&ns0;is_pet_of"/>
+            <OWLClass URI="&owl;Thing"/>
+        </ObjectSomeValuesFrom>
+        <OWLClass URI="&ns0;pet"/>
+    </EquivalentClasses>
+    <ClassAssertion>
+        <OWLClass URI="&owl;Thing"/>
+        <Individual URI="&ns0;Daily+Mirror"/>
+    </ClassAssertion>
+    <EntityAnnotation>
+        <ObjectProperty URI="&ns0;has_parent"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>has_parent</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <ClassAssertion>
+        <OWLClass URI="&ns0;tabloid"/>
+        <Individual URI="&ns0;The+Sun"/>
+    </ClassAssertion>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;newspaper"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >All newspapers are either broadsheets or tabloids.</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;The+Guardian"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>The Guardian</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <ClassAssertion>
+        <OWLClass URI="&owl;Thing"/>
+        <Individual URI="&ns0;Tom"/>
+    </ClassAssertion>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;magazine"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>magazine</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;female"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>female</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;lorry"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>lorry</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;tiger"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>tiger</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&ns0;drives"/>
+        <Individual URI="&ns0;Mick"/>
+        <Individual URI="&ns0;Q123+ABC"/>
+    </ObjectPropertyAssertion>
+    <SubClassOf>
+        <OWLClass URI="&ns0;quality+broadsheet"/>
+        <OWLClass URI="&ns0;broadsheet"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Huey"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;cow"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >Cows are naturally vegetarians.</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&ns0;newspaper"/>
+        <ObjectUnionOf>
+            <OWLClass URI="&ns0;broadsheet"/>
+            <OWLClass URI="&ns0;tabloid"/>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;bus"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;The+Times"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>The Times</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;company"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>company</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;elderly"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>elderly</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;male"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >The class of all male things.</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;cat+owner"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;woman"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;animal"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>animal</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;driver"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant></Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;animal+lover"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>animal lover</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <Individual URI="&ns0;Fluffy"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Fluffy</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <ObjectProperty URI="&ns0;has_child"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>has_child</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;publication"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>publication</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;tabloid"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>tabloid</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;lorry+driver"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>lorry driver</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;giraffe"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>giraffe</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&ns0;grass"/>
+        <OWLClass URI="&ns0;plant"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&ns0;elderly"/>
+        <Individual URI="&ns0;Minnie"/>
+    </ClassAssertion>
+    <DisjointClasses>
+        <OWLClass URI="&ns0;adult"/>
+        <OWLClass URI="&ns0;young"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&ns0;bus+company"/>
+        <OWLClass URI="&ns0;company"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&ns0;dog"/>
+        <Individual URI="&ns0;Rex"/>
+    </ClassAssertion>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;bus"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>bus</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <ClassAssertion>
+        <OWLClass URI="&ns0;person"/>
+        <Individual URI="&ns0;Walt"/>
+    </ClassAssertion>
+    <EntityAnnotation>
+        <OWLClass URI="&ns0;dog"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>dog</Constant>
+        </Annotation>
+    </EntityAnnotation>
+</Ontology>

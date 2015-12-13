@@ -1,0 +1,1 @@
+java -Xss4m -Xms30m -Xmx1000m -Djava.library.path="natives/win32" -Djava.util.logging.config.file= -jar lib\pronto.jar file:///C://kl//kb//cadiag2//partition//fragment_279.owl s file:///C://kl//kb//cadiag2//query.ppq

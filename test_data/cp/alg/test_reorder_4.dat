@@ -1,0 +1,378 @@
+38
+[-2.1689814815, 0.0, 0.0, -0.8449074074, -0.5208333333, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -0.2457264957, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -0.5208333333, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, -1.0]
+MIN
+[0.5, 0.0, -0.5]
+[-0.5, 0.0, 0.5]
+[-0.5, 0.0, 0.5]
+[0.1, 0.0, -0.9]
+[0.33, 0.0, -0.67]
+[-0.15, 0.0, 0.85]
+[-0.15, 0.0, 0.85]
+[0.0, 0.0, 1.0]
+[0.0, 0.0, 1.0]
+[-0.33, 0.0, 0.67]
+[-0.6, 0.0, 0.4]
+[-0.85, 0.0, 0.15]
+[-0.3, 0.0, 0.7]
+[0.025, 0.0, -0.975]
+[-0.65, 0.0, 0.35]
+[-0.2, 0.0, 0.8]
+[-0.79, 0.0, 0.21]
+[-0.025, 0.0, 0.975]
+[-0.25, 0.0, 0.75]
+[-0.35, 0.0, 0.65]
+[-0.21, 0.0, 0.79]
+[-0.877, 0.0, 0.123]
+[-0.75, 0.0, 0.25]
+[-0.64, 0.0, 0.36]
+[-0.13, 0.0, 0.87]
+[-0.87, 0.0, 0.13]
+[-0.5, 0.0, 0.5]
+[-0.35, 0.0, 0.65]
+[0.0, 0.0, 1.0]
+[0.21, 0.0, -0.79]
+[-0.36, 0.0, 0.64]
+[-0.65, 0.0, 0.35]
+[0.0, 0.0, 1.0]
+[-0.21, 0.0, 0.79]
+[0.0, 0.0, 1.0]
+[-0.5, 0.0, 0.5]
+[0.0]
+[1.0]
+Constraint
+RELATIONAL
+F
+[0, 1]
+[0.0, 0.0]
+[0.5, -0.5]
+[-0.5, 0.5]
+
+Constraint
+RELATIONAL
+I
+[2, 3]
+[0.0, 0.1]
+
+Constraint
+RELATIONAL
+I
+[5, 10]
+[0.85, -0.6]
+
+Constraint
+RELATIONAL
+F
+[24, 25]
+[0.87, -0.87]
+[0.0, 0.0]
+[-0.13, 0.13]
+
+Constraint
+RELATIONAL
+I
+[22, 29]
+[0.25, 0.21]
+
+Constraint
+RELATIONAL
+F
+[16, 20]
+[-0.79, 0.79]
+[0.0, 0.0]
+[0.21, -0.21]
+
+Constraint
+RELATIONAL
+I
+[2, 6]
+[-0.5, 0.85]
+
+Constraint
+RELATIONAL
+I
+[11, 15]
+[0.15, 0.8]
+
+Constraint
+RELATIONAL
+I
+[24, 29]
+[0.0, 0.21]
+
+Constraint
+RELATIONAL
+I
+[25, 31]
+[0.0, -0.65]
+
+Constraint
+RELATIONAL
+I
+[27, 32]
+[0.65, 0.0]
+
+Constraint
+RELATIONAL
+F
+[18, 22]
+[0.75, -0.75]
+[0.0, 0.0]
+[-0.25, 0.25]
+
+Constraint
+RELATIONAL
+I
+[1, 4]
+[-0.5, 0.33]
+
+Constraint
+RELATIONAL
+F
+[34, 35]
+[0.0, 0.0]
+[1.0, -0.5]
+[0.0, 0.5]
+
+Constraint
+RELATIONAL
+I
+[20, 25]
+[-0.21, 0.13]
+
+Constraint
+RELATIONAL
+I
+[17, 22]
+[-0.025, 0.0]
+
+Constraint
+RELATIONAL
+I
+[16, 21]
+[0.21, -0.877]
+
+Constraint
+RELATIONAL
+F
+[4, 9]
+[-0.67, 0.67]
+[0.0, 0.0]
+[0.33, -0.33]
+
+Constraint
+RELATIONAL
+I
+[11, 13]
+[-0.85, 0.025]
+
+Constraint
+RELATIONAL
+I
+[30, 31]
+[-0.36, 0.35]
+
+Constraint
+RELATIONAL
+I
+[3, 7]
+[0.1, 1.0]
+
+Constraint
+RELATIONAL
+I
+[28, 34]
+[1.0, 0.0]
+
+Constraint
+RELATIONAL
+I
+[17, 23]
+[-0.025, 0.36]
+
+Constraint
+RELATIONAL
+F
+[2, 7]
+[0.0, 0.0]
+[-0.5, 1.0]
+[0.5, 0.0]
+
+Constraint
+RELATIONAL
+I
+[4, 10]
+[0.0, -0.6]
+
+Constraint
+RELATIONAL
+F
+[27, 31]
+[0.0, 0.0]
+[0.65, -0.65]
+[-0.35, 0.35]
+
+Constraint
+RELATIONAL
+I
+[19, 24]
+[0.65, -0.13]
+
+Constraint
+RELATIONAL
+F
+[23, 30]
+[0.0, 0.0]
+[0.36, -0.36]
+[-0.64, 0.64]
+
+Constraint
+RELATIONAL
+I
+[32, 35]
+[1.0, -0.5]
+
+Constraint
+RELATIONAL
+I
+[21, 27]
+[0.0, -0.35]
+
+Constraint
+RELATIONAL
+I
+[30, 33]
+[0.64, -0.21]
+
+Constraint
+RELATIONAL
+F
+[29, 33]
+[-0.79, 0.79]
+[0.0, 0.0]
+[0.21, -0.21]
+
+Constraint
+RELATIONAL
+I
+[20, 26]
+[-0.21, 0.0]
+
+Constraint
+RELATIONAL
+I
+[9, 13]
+[0.0, 0.025]
+
+Constraint
+RELATIONAL
+I
+[14, 18]
+[-0.65, 0.0]
+
+Constraint
+RELATIONAL
+I
+[12, 16]
+[-0.3, 0.21]
+
+Constraint
+RELATIONAL
+F
+[3, 8]
+[0.1, 0.0]
+[-0.9, 1.0]
+[0.0, 0.0]
+
+Constraint
+RELATIONAL
+I
+[19, 23]
+[0.65, -0.64]
+
+Constraint
+RELATIONAL
+I
+[15, 18]
+[0.8, -0.25]
+
+Constraint
+RELATIONAL
+F
+[13, 17]
+[0.0, 0.0]
+[-0.975, 0.975]
+[0.025, -0.025]
+
+Constraint
+RELATIONAL
+F
+[26, 32]
+[0.0, 0.0]
+[-0.5, 1.0]
+[0.5, 0.0]
+
+Constraint
+RELATIONAL
+F
+[14, 19]
+[0.0, 0.0]
+[-0.65, 0.65]
+[0.35, -0.35]
+
+Constraint
+RELATIONAL
+F
+[6, 12]
+[0.0, 0.0]
+[0.85, -0.3]
+[-0.15, 0.7]
+
+Constraint
+RELATIONAL
+I
+[9, 14]
+[-0.33, -0.65]
+
+Constraint
+RELATIONAL
+F
+[21, 28]
+[-0.877, 1.0]
+[0.0, 0.0]
+[0.123, 0.0]
+
+Constraint
+RELATIONAL
+I
+[1, 5]
+[-0.5, -0.15]
+
+Constraint
+RELATIONAL
+I
+[34, 36]
+[1.0, 0.0]
+
+Constraint
+RELATIONAL
+F
+[10, 15]
+[0.4, -0.2]
+[0.0, 0.0]
+[-0.6, 0.8]
+
+Constraint
+RELATIONAL
+F
+[5, 11]
+[0.0, 0.0]
+[0.85, -0.85]
+[-0.15, 0.15]
+
+Constraint
+RELATIONAL
+I
+[26, 33]
+[-0.5, -0.21]
+
+

@@ -1,0 +1,1091 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE conflict_graph [
+    <!ENTITY pronto "http://clarkparsia.com/pronto#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<conflict_graph xmlns="http://clarkparsia.com/pronto#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:pronto="http://clarkparsia.com/pronto#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace">
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence>http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithPersonalBRCHistory</evidence>
+                <conclusion>http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderStronglyIncreasedBRCRisk</conclusion>
+                <probability lower="0.0" upper="1.0"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithPersonalBRCHistory</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithHighBoneDensity</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderStronglyIncreasedBRCRisk</conclusion>
+                <probability lower="0.25" upper="0.25"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithHighBoneDensity</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithUsualHyperplasia</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithUsualHyperplasia</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderModeratelyIncreasedBRCRisk</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingEstrogen</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingEstrogen</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderModeratelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.25" upper="0.25"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#AshkenaziJewishWoman</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#AshkenaziJewishWoman</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithBRCAMutation</conclusion>
+                <probability lower="0.025" upper="0.025"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithBRCAMutation</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithBRCAMutation</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderStronglyIncreasedBRCRisk</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#Woman</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderLifetimeBRCRisk</conclusion>
+                <probability lower="0.0" upper="0.123"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithBRCAMutation</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderLifetimeBRCRisk</conclusion>
+                <probability lower="0.3" upper="0.85"/>
+            </conditional_constraint>
+        </conflict_set>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanLackingExercise</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanLackingExercise</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderWeakelyIncreasedBRCRisk</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithLateMenopause</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderModeratelyIncreasedBRCRisk</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithLateMenopause</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithMotherAffectedBeforeAge60</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithMotherAffectedBeforeAge60</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderModeratelyIncreasedBRCRisk</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithHighBreastDensity</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithHighBreastDensity</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderStronglyIncreasedBRCRisk</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithAtypicalHyperplasia</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderStronglyIncreasedBRCRisk</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithAtypicalHyperplasia</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanAged4050</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanAged4050</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderShortTermBRCRisk</conclusion>
+                <probability lower="0.0" upper="0.025"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithHighBoneDensity</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderModeratelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.75" upper="0.75"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithHighBoneDensity</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithEarlyFirstPeriodAndLateMenopause</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithHighLevelOfEstrogen</conclusion>
+                <probability lower="0.9" upper="1.0"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithEarlyFirstPeriodAndLateMenopause</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingProgestin</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderStronglyIncreasedBRCRisk</conclusion>
+                <probability lower="0.36" upper="0.36"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingProgestin</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithoutChildren</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderModeratelyIncreasedBRCRisk</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithoutChildren</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanExposedToRadiationDuringYouth</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanExposedToRadiationDuringYouth</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderStronglyIncreasedBRCRisk</conclusion>
+                <probability lower="0.5" upper="0.5"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanAged3040</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanAged3040</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderShortTermBRCRisk</conclusion>
+                <probability lower="0.0" upper="0.014"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanAged5060</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanAged5060</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderShortTermBRCRisk</conclusion>
+                <probability lower="0.0" upper="0.035"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithMotherAffectedAfterAge60</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderWeakelyIncreasedBRCRisk</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithMotherAffectedAfterAge60</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanAged6070</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderShortTermBRCRisk</conclusion>
+                <probability lower="0.0" upper="0.039"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanAged6070</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithPersonalBRCHistory</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderStronglyIncreasedBRCRisk</conclusion>
+                <probability lower="0.75" upper="0.75"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithPersonalBRCHistory</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithBRCAMutation</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithBRCAMutation</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderLifetimeBRCRisk</conclusion>
+                <probability lower="0.3" upper="0.85"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#Woman</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderLifetimeBRCRisk</conclusion>
+                <probability lower="0.0" upper="0.123"/>
+            </conditional_constraint>
+        </conflict_set>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanHavingFirstPeriodBefore12</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithHighLevelOfEstrogen</conclusion>
+                <probability lower="0.5" upper="1.0"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanHavingFirstPeriodBefore12</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanAgedUnder20</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderShortTermBRCRisk</conclusion>
+                <probability lower="0.0" upper="5.0E-4"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanAgedUnder20</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingProgestin</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderModeratelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.5" upper="0.5"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingProgestin</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingEstrogenAndTestosterone</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingEstrogenAndTestosterone</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderModeratelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.79" upper="0.79"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingEstrogen</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderWeakelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.67" upper="0.67"/>
+            </conditional_constraint>
+        </conflict_set>
+        <conflict_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingEstrogen</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderModeratelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.25" upper="0.25"/>
+            </conditional_constraint>
+        </conflict_set>
+        <conflict_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingTestosterone</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderWeakelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.85" upper="0.85"/>
+            </conditional_constraint>
+        </conflict_set>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithLateMenopause</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithHighLevelOfEstrogen</conclusion>
+                <probability lower="0.5" upper="1.0"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithLateMenopause</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithCarcinomaInSitu</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithCarcinomaInSitu</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderStronglyIncreasedBRCRisk</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingEstrogenAndTestosterone</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingEstrogenAndTestosterone</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderWeakelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.21" upper="0.21"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingEstrogen</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderWeakelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.67" upper="0.67"/>
+            </conditional_constraint>
+        </conflict_set>
+        <conflict_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingTestosterone</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderWeakelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.85" upper="0.85"/>
+            </conditional_constraint>
+        </conflict_set>
+        <conflict_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingEstrogen</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderModeratelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.25" upper="0.25"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingEstrogenAndTestosterone</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderModeratelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.79" upper="0.79"/>
+            </conditional_constraint>
+        </conflict_set>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingTestosterone</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderWeakelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.85" upper="0.85"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingTestosterone</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingProgestin</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderWeakelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.13" upper="0.13"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingProgestin</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingEstrogenAndProgestin</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderModeratelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.65" upper="0.65"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingEstrogenAndProgestin</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingProgestin</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderWeakelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.13" upper="0.13"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingEstrogenAndProgestin</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderWeakelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.35" upper="0.35"/>
+            </conditional_constraint>
+        </conflict_set>
+        <conflict_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingProgestin</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderModeratelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.5" upper="0.5"/>
+            </conditional_constraint>
+        </conflict_set>
+        <conflict_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingEstrogen</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderWeakelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.67" upper="0.67"/>
+            </conditional_constraint>
+        </conflict_set>
+        <conflict_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingEstrogen</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderModeratelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.25" upper="0.25"/>
+            </conditional_constraint>
+        </conflict_set>
+        <conflict_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingProgestin</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderStronglyIncreasedBRCRisk</conclusion>
+                <probability lower="0.36" upper="0.36"/>
+            </conditional_constraint>
+        </conflict_set>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#Woman</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderLifetimeBRCRisk</conclusion>
+                <probability lower="0.0" upper="0.123"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#Woman</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithHighBoneDensity</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithHighLevelOfEstrogen</conclusion>
+                <probability lower="0.5" upper="1.0"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithHighBoneDensity</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithHighLevelOfEstrogen</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithHighLevelOfEstrogen</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderModeratelyIncreasedBRCRisk</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithBRCA1Mutation</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderLifetimeBRCRisk</conclusion>
+                <probability lower="0.6" upper="0.8"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithBRCA1Mutation</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#Woman</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderLifetimeBRCRisk</conclusion>
+                <probability lower="0.0" upper="0.123"/>
+            </conditional_constraint>
+        </conflict_set>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingEstrogenAndProgestin</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderWeakelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.35" upper="0.35"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingEstrogenAndProgestin</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingEstrogenAndProgestin</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderModeratelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.65" upper="0.65"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingEstrogen</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderModeratelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.25" upper="0.25"/>
+            </conditional_constraint>
+        </conflict_set>
+        <conflict_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingEstrogenAndProgestin</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderModeratelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.65" upper="0.65"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingProgestin</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderStronglyIncreasedBRCRisk</conclusion>
+                <probability lower="0.36" upper="0.36"/>
+            </conditional_constraint>
+        </conflict_set>
+        <conflict_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingProgestin</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderModeratelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.5" upper="0.5"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingEstrogenAndProgestin</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderModeratelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.65" upper="0.65"/>
+            </conditional_constraint>
+        </conflict_set>
+        <conflict_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingEstrogen</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderWeakelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.67" upper="0.67"/>
+            </conditional_constraint>
+        </conflict_set>
+        <conflict_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingProgestin</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderModeratelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.5" upper="0.5"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingEstrogen</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderModeratelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.25" upper="0.25"/>
+            </conditional_constraint>
+        </conflict_set>
+        <conflict_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingProgestin</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderModeratelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.5" upper="0.5"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingProgestin</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderStronglyIncreasedBRCRisk</conclusion>
+                <probability lower="0.36" upper="0.36"/>
+            </conditional_constraint>
+        </conflict_set>
+        <conflict_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingProgestin</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderWeakelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.13" upper="0.13"/>
+            </conditional_constraint>
+        </conflict_set>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanExposedToRadiationDuringYouth</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanExposedToRadiationDuringYouth</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderModeratelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.5" upper="0.5"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithPersonalBRCHistory</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderModeratelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.25" upper="0.25"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithPersonalBRCHistory</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanAged2030</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderShortTermBRCRisk</conclusion>
+                <probability lower="0.0" upper="0.0040"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanAged2030</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#OverweightWoman</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderWeakelyIncreasedBRCRisk</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#OverweightWoman</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithImmediateRelativesBRCAffected</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderStronglyIncreasedBRCRisk</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanWithImmediateRelativesBRCAffected</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+    <conflict_mapping>
+        <constraint_set>
+            <conditional_constraint>
+                <evidence
+                    >http://www.w3.org/2002/07/owl#Thing</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingEstrogen</conclusion>
+                <probability lower="1.0" upper="1.0"/>
+            </conditional_constraint>
+            <conditional_constraint>
+                <evidence
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingEstrogen</evidence>
+                <conclusion
+                    >http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderWeakelyIncreasedBRCRisk</conclusion>
+                <probability lower="0.67" upper="0.67"/>
+            </conditional_constraint>
+        </constraint_set>
+        <conflict_set/>
+    </conflict_mapping>
+</conflict_graph>

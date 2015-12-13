@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<!DOCTYPE owl [
+<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+<!ENTITY test "file:test_prefix">
+<!ENTITY pronto "http://clarkparsia.com/pronto#">
+]>
+<rdf:RDF xmlns="file:test_prefix"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:owl="http://www.w3.org/2002/07/owl#"
+ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+ xmlns:test="&test;"
+ xmlns:pronto="http://clarkparsia.com/pronto#"
+ xml:base="file:test_prefix/" 
+
+>
+
+
+<owl:Ontology rdf:about="file:test_data/tmp/sparrow.rdf">
+<rdfs:comment>Union of TBoxes</rdfs:comment>
+<owl:versionInfo>1.0</owl:versionInfo>
+<rdfs:label></rdfs:label>
+</owl:Ontology>
+
+
+  <owl:Class rdf:about="&test;#Sparrow">
+    <rdfs:label>Sparrow</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&test;#Bird"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="&test;#Sparrow_tweety">
+    <rdfs:label>Sparrow copy for Tweety</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&test;#Bird_tweety"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="&test;#Sparrow_sam">
+    <rdfs:label>Sparrow copy for Sam</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&test;#Bird_sam"/>
+  </owl:Class>
+
+	<!--Atomic name for \neg Bird-->
+
+    <owl:Class rdf:about="&test;#NotBird">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&test;#Bird"/>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+
+
+    <owl:Class rdf:about="&test;#NotBird_tweety">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&test;#Bird_tweety"/>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+
+
+    <owl:Class rdf:about="&test;#NotBird_sam">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&test;#Bird_sam"/>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+
+
+  <!--Required only for OWL API -->
+
+  <owl:Class rdf:about="&test;#FlyingObject">
+    <rdfs:label>FlyingObject</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="&test;#FlyingObject_tweety">
+    <rdfs:label>FlyingObject</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="&test;#FlyingObject_sam">
+    <rdfs:label>FlyingObject</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+  </owl:Class>
+
+
+</rdf:RDF>

@@ -1,0 +1,57 @@
+6
+[1.0, -2.0, -0.0, -0.0, -0.0, -1.0]
+MIN
+[0.0, 1.0]
+[0.0, 0.5, -0.5]
+[0.0, -0.3, 0.7]
+[0.0, 1.0, 0.0]
+[0.0, 1.0, 0.0]
+[1.0]
+Constraint
+RELATIONAL
+I
+[1, 2]
+[0.0, 0.0]
+
+Constraint
+RELATIONAL
+I
+[0, 3, 4]
+[1.0, 0.0, 1.0]
+
+Constraint
+RELATIONAL
+I
+[3, 4]
+[0.0, 0.0]
+
+Constraint
+RELATIONAL
+F
+[1, 2]
+[0.5, -0.3]
+[-0.5, 0.7]
+[0.0, 0.0]
+
+Constraint
+RELATIONAL
+F
+[3, 4]
+[0.0, 1.0]
+[0.0, 0.0]
+[1.0, 0.0]
+
+Constraint
+RELATIONAL
+I
+[0, 1, 2]
+[0.0, 0.5, -0.3]
+
+Constraint
+RELATIONAL
+I
+[1, 2, 3, 4]
+[0.5, -0.3, 0.0, 1.0]
+
+
+

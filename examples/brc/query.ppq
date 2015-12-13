@@ -1,0 +1,3 @@
+unsat_subsets
+psat
+entail http://clarkparsia.com/pronto/cancer_ra.owl#PostmenopausalWomanTakingEstrogenAndTestosterone http://clarkparsia.com/pronto/cancer_ra.owl#WomanUnderModeratelyIncreasedBRCRisk 

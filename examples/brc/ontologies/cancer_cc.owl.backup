@@ -1,0 +1,477 @@
+<?xml version="1.0"?> 
+
+<!DOCTYPE owl [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY owl11 "http://www.w3.org/2006/12/owl11#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl11xml "http://www.w3.org/2006/12/owl11-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY cancer_ra "http://clarkparsia.com/pronto/cancer_ra.owl" >
+    <!ENTITY cancer_cc "http://clarkparsia.com/pronto/cancer_cc.owl" >
+    <!ENTITY pronto "http://clarkparsia.com/pronto#" >
+
+]>
+
+<rdf:RDF xmlns="&cancer_ra;#"
+     xml:base="&cancer_ra;"
+     xmlns:owl11="http://www.w3.org/2006/12/owl11#"
+     xmlns:owl11xml="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:cancer_ra="&cancer_ra;#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:pronto="&pronto;"
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
+
+
+    <owl:Ontology rdf:about="&cancer_cc;">
+      <rdfs:comment>Bunch of conditional constraints for assessing breast cancer risk</rdfs:comment>
+      <owl:versionInfo>1.0</owl:versionInfo>
+      <owl:imports rdf:resource="file:examples/brc/ontologies/cancer_ra.owl"/>
+    </owl:Ontology>
+
+  
+    <owl:AnnotationProperty rdf:about="&pronto;certainty"/>
+
+
+    <!--
+       Lifetime absolute risk
+    -->
+
+    <!-- Any woman has a 12.3% risk of lifetime breast cancer -->      
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#Woman"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderLifetimeBRCRisk"/>
+        <pronto:certainty>0;0.123</pronto:certainty>
+    </owl11:Axiom>
+
+
+    <!-- If a woman has BRCA mutation, then the risk is beteen 30% and 85% -->                
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanWithBRCAMutation"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderLifetimeBRCRisk"/>
+        <pronto:certainty>0.3;0.85</pronto:certainty>              
+    </owl11:Axiom>                                                 
+
+    <!-- If it's BRCA1 mutation, then the lifetime risk is between 60% and 80% --> 
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanWithBRCA1Mutation"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderLifetimeBRCRisk"/>
+        <pronto:certainty>0.6;0.8</pronto:certainty>
+    </owl11:Axiom>
+                                                                                      
+
+    <!--
+      Age-related risk
+    -->                     
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanAgedUnder20"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderShortTermBRCRisk"/>
+        <pronto:certainty>0;0.0005</pronto:certainty>
+    </owl11:Axiom>  
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanAged2030"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderShortTermBRCRisk"/>
+        <pronto:certainty>0;0.004</pronto:certainty>
+    </owl11:Axiom>
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanAged3040"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderShortTermBRCRisk"/>
+        <pronto:certainty>0;0.014</pronto:certainty>
+    </owl11:Axiom>
+                     
+                          
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanAged4050"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderShortTermBRCRisk"/>
+        <pronto:certainty>0;0.025</pronto:certainty>
+    </owl11:Axiom>
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanAged5060"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderShortTermBRCRisk"/>
+        <pronto:certainty>0;0.035</pronto:certainty>
+    </owl11:Axiom>
+
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanAged6070"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderShortTermBRCRisk"/>
+        <pronto:certainty>0;0.039</pronto:certainty>
+    </owl11:Axiom>
+                           
+                        
+
+    <!--
+       Relative breast cancer risks
+    -->
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanWithCarcinomaInSitu"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderStronglyIncreasedBRCRisk"/>
+        <pronto:certainty>1;1</pronto:certainty>
+    </owl11:Axiom>
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanWithBRCAMutation"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderStronglyIncreasedBRCRisk"/>
+        <pronto:certainty>1;1</pronto:certainty>
+    </owl11:Axiom>
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanWithImmediateRelativesBRCAffected"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderStronglyIncreasedBRCRisk"/>
+        <pronto:certainty>1;1</pronto:certainty>
+    </owl11:Axiom>
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanWithMotherAffectedBeforeAge60"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderModeratelyIncreasedBRCRisk"/>
+        <pronto:certainty>1;1</pronto:certainty>
+    </owl11:Axiom>
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanWithMotherAffectedAfterAge60"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderWeakelyIncreasedBRCRisk"/>
+        <pronto:certainty>1;1</pronto:certainty>
+    </owl11:Axiom>
+
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanWithHighBreastDensity"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderStronglyIncreasedBRCRisk"/>
+        <pronto:certainty>1;1</pronto:certainty>
+    </owl11:Axiom>           
+
+    
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanWithPersonalBRCHistory"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderStronglyIncreasedBRCRisk"/>
+        <pronto:certainty>0;1</pronto:certainty>
+    </owl11:Axiom>
+
+                          
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanWithPersonalBRCHistory"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderModeratelyIncreasedBRCRisk"/>
+        <pronto:certainty>0.25;0.25</pronto:certainty> 
+    </owl11:Axiom>
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanWithPersonalBRCHistory"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderStronglyIncreasedBRCRisk"/>
+        <pronto:certainty>0.75;0.75</pronto:certainty> 
+    </owl11:Axiom>
+
+                                       
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanWithHighBreastDensity"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderStronglyIncreasedBRCRisk"/>
+        <pronto:certainty>1;1</pronto:certainty>
+    </owl11:Axiom>
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanWithAtypicalHyperplasia"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderStronglyIncreasedBRCRisk"/>
+        <pronto:certainty>1;1</pronto:certainty>
+    </owl11:Axiom>
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanWithUsualHyperplasia"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderModeratelyIncreasedBRCRisk"/>
+        <pronto:certainty>1;1</pronto:certainty>
+    </owl11:Axiom>
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanExposedToRadiationDuringYouth"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderModeratelyIncreasedBRCRisk"/>
+        <pronto:certainty>0.5;0.5</pronto:certainty>  
+    </owl11:Axiom>
+
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanExposedToRadiationDuringYouth"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderStronglyIncreasedBRCRisk"/>
+        <pronto:certainty>0.5;0.5</pronto:certainty>
+    </owl11:Axiom>
+
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanWithHighLevelOfEstrogen"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderModeratelyIncreasedBRCRisk"/>
+        <pronto:certainty>1;1</pronto:certainty>
+    </owl11:Axiom>
+                      
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanWithHighBoneDensity"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderStronglyIncreasedBRCRisk"/>
+        <pronto:certainty>0.25;0.25</pronto:certainty>
+    </owl11:Axiom>
+                          
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanWithHighBoneDensity"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderModeratelyIncreasedBRCRisk"/>
+        <pronto:certainty>0.75;0.75</pronto:certainty>
+    </owl11:Axiom>
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanWithLateMenopause"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderModeratelyIncreasedBRCRisk"/>
+        <pronto:certainty>1;1</pronto:certainty>
+    </owl11:Axiom> 
+
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanWithoutChildren"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderModeratelyIncreasedBRCRisk"/>
+        <pronto:certainty>1;1</pronto:certainty>
+    </owl11:Axiom>
+
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#OverweightWoman"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderWeakelyIncreasedBRCRisk"/>
+        <pronto:certainty>1;1</pronto:certainty>
+    </owl11:Axiom>
+
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanLackingExercise"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderWeakelyIncreasedBRCRisk"/>
+        <pronto:certainty>1;1</pronto:certainty>
+    </owl11:Axiom>                                       
+
+
+
+    <!--
+       Relationships between risk factors  (from statistics)
+    -->                                                            
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#AshkenaziJewishWoman"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanWithBRCAMutation"/>
+        <pronto:certainty>0.025;0.025</pronto:certainty>
+    </owl11:Axiom>             
+
+    <!-- The following constraints are about hormones
+         They only apply to postmenopausal women -->      
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#PostmenopausalWomanTakingEstrogen"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderWeakelyIncreasedBRCRisk"/>
+        <pronto:certainty>0.67;0.67</pronto:certainty>  
+    </owl11:Axiom>
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#PostmenopausalWomanTakingEstrogen"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderModeratelyIncreasedBRCRisk"/>
+        <pronto:certainty>0.25;0.25</pronto:certainty>  
+    </owl11:Axiom>
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#PostmenopausalWomanTakingProgestin"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderWeakelyIncreasedBRCRisk"/>
+        <pronto:certainty>0.13;0.13</pronto:certainty>
+    </owl11:Axiom>
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#PostmenopausalWomanTakingProgestin"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderModeratelyIncreasedBRCRisk"/>
+        <pronto:certainty>0.50;0.50</pronto:certainty>
+    </owl11:Axiom>
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#PostmenopausalWomanTakingProgestin"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderStronglyIncreasedBRCRisk"/>
+        <pronto:certainty>0.36;0.36</pronto:certainty>
+    </owl11:Axiom>
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#PostmenopausalWomanTakingTestosterone"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderWeakelyIncreasedBRCRisk"/>
+        <pronto:certainty>0.85;0.85</pronto:certainty>
+    </owl11:Axiom>
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#PostmenopausalWomanTakingEstrogenAndProgestin"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderWeakelyIncreasedBRCRisk"/>
+        <pronto:certainty>0.35;0.35</pronto:certainty>
+    </owl11:Axiom>
+
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#PostmenopausalWomanTakingEstrogenAndProgestin"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderModeratelyIncreasedBRCRisk"/>
+        <pronto:certainty>0.65;0.65</pronto:certainty>
+    </owl11:Axiom>
+
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#PostmenopausalWomanTakingEstrogenAndTestosterone"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderWeakelyIncreasedBRCRisk"/>
+        <pronto:certainty>0.21;0.21</pronto:certainty>
+    </owl11:Axiom>
+
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#PostmenopausalWomanTakingEstrogenAndTestosterone"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderModeratelyIncreasedBRCRisk"/>
+        <pronto:certainty>0.79;0.79</pronto:certainty>
+    </owl11:Axiom>            
+
+		<!--Contradictions here -->
+
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#PostmenopausalWomanTakingEstrogenAndTestosterone"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanUnderModeratelyIncreasedBRCRisk"/>
+        <pronto:certainty>0.2;0.3</pronto:certainty>
+    </owl11:Axiom>            
+
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="&owl;Thing"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#PostmenopausalWomanTakingEstrogenAndTestosterone"/>
+        <pronto:certainty>1:1</pronto:certainty>
+    </owl11:Axiom>            
+
+
+
+
+    <!-- THIS ARE NOT REAL NUMBERS!!! They simply reflect evidence that certain things are associated with high level of estrogen -->
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanWithHighBoneDensity"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanWithHighLevelOfEstrogen"/>
+        <pronto:certainty>0.5;0.1</pronto:certainty>
+    </owl11:Axiom>
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanHavingFirstPeriodBefore12"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanWithHighLevelOfEstrogen"/>
+        <pronto:certainty>0.5;0.1</pronto:certainty>
+    </owl11:Axiom>
+
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanWithLateMenopause"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanWithHighLevelOfEstrogen"/>
+        <pronto:certainty>0.5;0.1</pronto:certainty>
+    </owl11:Axiom>
+
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#WomanWithEarlyFirstPeriodAndLateMenopause"/>
+        <rdf:predicate rdf:resource="&rdfs;subClassOf"/>
+        <rdf:object rdf:resource="#WomanWithHighLevelOfEstrogen"/>
+        <pronto:certainty>0.9;0.1</pronto:certainty>
+    </owl11:Axiom>
+
+
+
+    <!--
+      Individuals
+    -->
+
+    <!--owl11:Axiom>
+        <rdf:subject rdf:resource="#Julie"/>
+        <rdf:predicate rdf:resource="&rdf;type"/>
+        <rdf:object rdf:resource="#WomanAged3040"/>
+        <pronto:certainty>1;1</pronto:certainty>
+    </owl11:Axiom>
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#Mary"/>
+        <rdf:predicate rdf:resource="&rdf;type"/>
+        <rdf:object rdf:resource="#WomanWithBRCA1Mutation"/>
+        <pronto:certainty>1;1</pronto:certainty>
+    </owl11:Axiom>
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#Ann"/>
+        <rdf:predicate rdf:resource="&rdf;type"/>
+        <rdf:object rdf:resource="#WomanWithMotherBRCAffected"/>
+        <pronto:certainty>1;1</pronto:certainty>
+    </owl11:Axiom>
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#Ann"/>
+        <rdf:predicate rdf:resource="&rdf;type"/>
+        <rdf:object rdf:resource="#AshkenaziJewishWoman"/>
+        <pronto:certainty>0.9;0.95</pronto:certainty>
+    </owl11:Axiom-->
+
+
+    <!--owl11:Axiom>
+        <rdf:subject rdf:resource="#Helen"/>
+        <rdf:predicate rdf:resource="&rdf;type"/>
+        <rdf:object rdf:resource="#PostmenopausalWoman"/>
+        <pronto:certainty>1;1</pronto:certainty>
+    </owl11:Axiom>
+
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#Helen"/>
+        <rdf:predicate rdf:resource="&rdf;type"/>
+        <rdf:object rdf:resource="#WomanTakingEstrogen"/>
+        <pronto:certainty>1;1</pronto:certainty>
+    </owl11:Axiom>
+
+
+    <owl11:Axiom>
+        <rdf:subject rdf:resource="#Helen"/>
+        <rdf:predicate rdf:resource="&rdf;type"/>
+        <rdf:object rdf:resource="#WomanTakingProgestin"/>
+        <pronto:certainty>1;1</pronto:certainty>
+    </owl11:Axiom-->
+
+
+</rdf:RDF>

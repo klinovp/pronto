@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE owl [
+<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+<!ENTITY test "file:test_prefix">
+<!ENTITY pronto "http://clarkparsia.com/pronto#">
+]>
+<rdf:RDF xmlns="file:test_prefix#"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:owl="http://www.w3.org/2002/07/owl#"
+ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+ xmlns:test="&test;"
+ xmlns:pronto="http://clarkparsia.com/pronto#"
+ xml:base="file:test_prefix" 
+
+>
+
+<!--For some reason OWLAPI doesn't recognize file:test_prefix as a URI prefix, so it doesn't apply to rdf:about. Something like http://test_domain.com works nicely -->
+
+
+<owl:Ontology rdf:about="file:test_data/index/test.xml">
+<rdfs:comment>Simple classical part of probabilistic ontology</rdfs:comment>
+<owl:versionInfo>1.0</owl:versionInfo>
+<rdfs:label>Test</rdfs:label>
+</owl:Ontology>
+
+  <owl:Class rdf:about="&test;#Bird">
+    <rdfs:label>Bird</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="&test;#FlyingObject">
+    <rdfs:label>FlyingObject</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="&test;#Penguin">
+    <rdfs:subClassOf rdf:resource="&test;#Bird"/>
+    <rdfs:label>Penguin</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="&test;#Hawk">
+    <rdfs:subClassOf rdf:resource="&test;#Bird"/>
+    <rdfs:label>Hawk</rdfs:label>
+  </owl:Class>
+
+
+  <owl:Class rdf:about="#&test;WingedObject">
+    <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    <rdfs:label>Anything that has wings</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="&test;#WingedFlying">
+    <owl:intersectionOf rdf:parseType="Collection">
+      <owl:Class rdf:about="&test;#WingedObject"/>
+      <owl:Class rdf:about="&test;#FlyingObject"/>
+    </owl:intersectionOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="&test;#ArcticPenguin">
+    <rdfs:subClassOf rdf:resource="&test;#Penguin"/>
+    <rdfs:label>Some sub-penguin for which we'd like to know if it can fly or not</rdfs:label>
+  </owl:Class>
+
+
+</rdf:RDF>

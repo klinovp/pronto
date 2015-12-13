@@ -1,0 +1,7 @@
+build/
+*.log
+dist/
+.idea
+.DS_Store
+out/
+natives/

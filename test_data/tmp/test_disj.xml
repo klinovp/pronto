@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!DOCTYPE owl [
+<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+<!ENTITY test "file:test_prefix">
+<!ENTITY pronto "http://clarkparsia.com/pronto#">
+]>
+<rdf:RDF xmlns="file:test_prefix"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:owl="http://www.w3.org/2002/07/owl#"
+ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+ xmlns:test="&test;"
+ xmlns:pronto="http://clarkparsia.com/pronto#"
+ xml:base="file:test_prefix/" 
+
+>
+
+
+<owl:Ontology rdf:about="file:test_data/tmp/test.xml">
+<rdfs:comment>Union of PABoxes</rdfs:comment>
+<owl:versionInfo>1.0</owl:versionInfo>
+<rdfs:label>Test</rdfs:label>
+</owl:Ontology>
+
+  <owl:Class rdf:about="&test;#Bird">
+    <rdfs:label>Bird</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="&test;#FlyingObject">
+    <rdfs:label>FlyingObject</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="&test;#Penguin">
+    <rdfs:label>Penguin</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&test;Bird"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="&test;#Penguin_tweety">
+    <rdfs:label>Penguin</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&test;Bird_tweety"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="&test;#Penguin_sam">
+    <rdfs:label>Penguin</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&test;Bird_sam"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="&test;#Bird_tweety">
+    <rdfs:label>Bird</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="&test;#FlyingObject_tweety">
+    <rdfs:label>FlyingObject</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="&test;#Bird_sam">
+    <rdfs:label>Bird</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="&test;#FlyingObject_sam">
+    <rdfs:label>FlyingObject</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+  </owl:Class>
+
+  <!--owl:Class rdf:about="&test;#Penguin">
+    <rdfs:subClassOf rdf:resource="&test;#Bird"/>
+    <rdfs:label>Penguin</rdfs:label>
+  </owl:Class-->
+
+
+</rdf:RDF>
