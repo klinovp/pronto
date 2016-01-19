@@ -121,14 +121,16 @@ public class ZPartitionerImpl implements ZPartitioner {
 		
 		s_logger.info( "PTBox z-partitioned in: " + (System.currentTimeMillis() - t) + "ms");
 		
-		if (!ccSubset.isEmpty()) {
+		if (!ccSubset.isEmpty() || ptbox.getDefaultConstraints().isEmpty()) {
 			
 			suppData.setZPartition( zp );
 			fireAfterZPartitionGraphEvent( ptbox );
 			
 			return zp;
 			
-		} else return null;
+		} else {
+			return null;
+		}
 	}
 	
 	private Map<ATermAppl, Set<ConditionalConstraint>> getEvidenceToConstraintsMap(Set<ConditionalConstraint> ccSet) {

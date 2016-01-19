@@ -115,6 +115,7 @@ public class KBEmbeddedLoader implements ProntoLoader {
 				
 				pkb.setPTBox( ptbox );
 				pkb.setPABox( new PABoxImpl(ccMap ) );
+				ptbox.setID( ontology.getOntologyID().getOntologyIRI().toString() );
 			}
 
 			pkb.preprocess();

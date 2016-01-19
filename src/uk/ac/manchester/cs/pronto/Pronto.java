@@ -124,6 +124,11 @@ public class Pronto {
 		
 		qp.setProbKnowledgeBase(pkb);
 		qp.setExplanationsRequired( true );
+
+		System.out.println("--------------------");
+		System.out.println("Number of OWL axioms: " + pkb.getPTBox().getClassicalOntology().getLogicalAxiomCount());
+		System.out.println("Number of generic probabilistic axioms: " + pkb.getPTBox().getDefaultConstraints().size());
+		System.out.println("Number of probabilistic individuals: " + pkb.getPABox().getProbabilisticIndividuals().size());
 		
 		long t = System.currentTimeMillis();
 		qResult = qp.process(query);
